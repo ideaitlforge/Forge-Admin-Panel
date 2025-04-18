@@ -10,7 +10,7 @@ const StartupTable = ({ startups, loading }: { startups: any, loading: boolean }
   const handleMakeInactive = async (id: string) => {
     try {
       const response = await axios.put(
-        `https://forgebackend.vercel.app/api/v1/startup/change-inactive/${id}`,
+        `https://forge-backend-self.vercel.app/api/v1/startup/change-inactive/${id}`,
         {},
         { withCredentials: true }
       );
@@ -32,7 +32,7 @@ const StartupTable = ({ startups, loading }: { startups: any, loading: boolean }
   const handleMakeActive = async (id: string) => {
     try {
       const response = await axios.put(
-        `https://forgebackend.vercel.app/api/v1/startup/change-active/${id}`,
+        `https://forge-backend-self.vercel.app/api/v1/startup/change-active/${id}`,
         {},
         { withCredentials: true }
       );
@@ -53,7 +53,7 @@ const StartupTable = ({ startups, loading }: { startups: any, loading: boolean }
 
   const handleDeleteStartup = async (id: string) => {
     try {
-      const response = await axios.delete(`https://forgebackend.vercel.app/api/v1/startup/${id}`, {
+      const response = await axios.delete(`https://forge-backend-self.vercel.app/api/v1/startup/${id}`, {
         withCredentials: true
       });
       console.log(response);

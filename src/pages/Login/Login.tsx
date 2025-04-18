@@ -25,7 +25,7 @@ const Login = () => {
     setIsLoading(true);
     try {
       const response = await axios.post(
-        "https://forgebackend.vercel.app/api/v1/auth/login",
+        "https://forge-backend-self.vercel.app/api/v1/auth/login",
         data,
         { withCredentials: true }
       );

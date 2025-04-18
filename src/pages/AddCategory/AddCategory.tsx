@@ -65,7 +65,7 @@ const AddCategory = () => {
 
             try {
                 // Send image to the API
-                const response = await axios.post("https://forgebackend.vercel.app/api/v1/image/upload", formData, {
+                const response = await axios.post("https://forge-backend-self.vercel.app/api/v1/image/upload", formData, {
                     withCredentials: true
                 });
                 const imageId = response?.data?.image?._id;
@@ -108,7 +108,7 @@ const AddCategory = () => {
 
             try {
                 // Send image to the API
-                const response = await axios.post("https://forgebackend.vercel.app/api/v1/image/upload", formData, {
+                const response = await axios.post("https://forge-backend-self.vercel.app/api/v1/image/upload", formData, {
                     withCredentials: true
                 });
                 const imageId = response?.data?.image?._id;
@@ -157,7 +157,7 @@ const AddCategory = () => {
 
             try {
                 // Send image to the API
-                const response = await axios.post("https://forgebackend.vercel.app/api/v1/image/upload", formData, {
+                const response = await axios.post("https://forge-backend-self.vercel.app/api/v1/image/upload", formData, {
                     withCredentials: true
                 });
                 const imageId = response?.data?.image?._id;
@@ -214,7 +214,7 @@ const AddCategory = () => {
 
             try {
                 // Send image to the API
-                const response = await axios.post("https://forgebackend.vercel.app/api/v1/image/upload", formData, {
+                const response = await axios.post("https://forge-backend-self.vercel.app/api/v1/image/upload", formData, {
                     withCredentials: true
                 });
 
@@ -317,7 +317,7 @@ const AddCategory = () => {
         try {
             setIsStartupAdding(true);
             // Send image to the API
-            const response = await axios.post("https://forgebackend.vercel.app/api/v1/startup/create", startUpData, {
+            const response = await axios.post("https://forge-backend-self.vercel.app/api/v1/startup/create", startUpData, {
                 withCredentials: true
             });
             if (response?.data?.message) {

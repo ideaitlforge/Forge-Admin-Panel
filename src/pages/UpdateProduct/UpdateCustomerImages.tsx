@@ -45,7 +45,7 @@ const UpdateCustomerImages: React.FC<UpdateCustomerImagesProps> = ({
       const loadingToast = toast.loading("Uploading image..."); // Show loading toast
 
       try {
-        const response = await axios.post("https://forgebackend.vercel.app/api/v1/image/upload", formData, {
+        const response = await axios.post("https://forge-backend-self.vercel.app/api/v1/image/upload", formData, {
           withCredentials: true,
         });
         const imageId = response?.data?.image?._id;
@@ -76,7 +76,7 @@ const UpdateCustomerImages: React.FC<UpdateCustomerImagesProps> = ({
   const handleDeleteImage = (fileId: string) => {
     const loadingToast = toast.loading("Deleting image...");
 
-    axios.delete(`https://forgebackend.vercel.app/api/v1/image/delete/${fileId}`, {
+    axios.delete(`https://forge-backend-self.vercel.app/api/v1/image/delete/${fileId}`, {
       withCredentials: true
     })
     .then(() => {

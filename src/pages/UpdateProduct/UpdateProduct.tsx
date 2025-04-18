@@ -37,7 +37,7 @@ const UpdateProduct = () => {
   useEffect(() => {
     const fetchStartups = async () => {
       try {
-        const response = await axios.get(`https://forgebackend.vercel.app/api/v1/startup/${id}`, {
+        const response = await axios.get(`https://forge-backend-self.vercel.app/api/v1/startup/${id}`, {
           withCredentials: true
         });
         setStartup(response?.data?.startup);
@@ -170,7 +170,7 @@ const UpdateProduct = () => {
 
       try {
         // Send image to the API
-        const response = await axios.post("https://forgebackend.vercel.app/api/v1/image/upload", formData, {
+        const response = await axios.post("https://forge-backend-self.vercel.app/api/v1/image/upload", formData, {
           withCredentials: true
         });
 
@@ -232,7 +232,7 @@ const UpdateProduct = () => {
 
       try {
         // Send image upload request to the API
-        const response = await axios.post("https://forgebackend.vercel.app/api/v1/image/upload", formData, {
+        const response = await axios.post("https://forge-backend-self.vercel.app/api/v1/image/upload", formData, {
           withCredentials: true
         });
         const imageId = response?.data?.image?._id;
@@ -264,7 +264,7 @@ const UpdateProduct = () => {
     const loadingToast = toast.loading("Deleting image...");
 
     try {
-      await axios.delete(`https://forgebackend.vercel.app/api/v1/image/delete/${fileId}`, {
+      await axios.delete(`https://forge-backend-self.vercel.app/api/v1/image/delete/${fileId}`, {
         withCredentials: true
       });
 
@@ -330,7 +330,7 @@ const UpdateProduct = () => {
     try {
       setIsStartupUpdating(true);
       // Send image to the API
-      const response = await axios.put(`https://forgebackend.vercel.app/api/v1/startup/${startup?._id}`, startUpData, {
+      const response = await axios.put(`https://forge-backend-self.vercel.app/api/v1/startup/${startup?._id}`, startUpData, {
         withCredentials: true
       });
       if (response?.data?.message) {
@@ -350,7 +350,7 @@ const UpdateProduct = () => {
   //   const toastId = toast.loading("Deleting image..."); // Show loading toast
 
   //   try {
-  //     const response = await axios.delete(`https://forgebackend.vercel.app/api/v1/image/delete/${fileId}`, {
+  //     const response = await axios.delete(`https://forge-backend-self.vercel.app/api/v1/image/delete/${fileId}`, {
   //       withCredentials: true,
   //     });
 
@@ -374,7 +374,7 @@ const UpdateProduct = () => {
     const toastId = toast.loading("Deleting logo..."); // Show loading toast
   
     try {
-      await axios.delete(`https://forgebackend.vercel.app/api/v1/image/delete/${fileId}`, {
+      await axios.delete(`https://forge-backend-self.vercel.app/api/v1/image/delete/${fileId}`, {
         withCredentials: true,
       });
       setStartupLogo("")

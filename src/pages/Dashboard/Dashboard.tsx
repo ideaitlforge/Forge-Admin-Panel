@@ -32,7 +32,7 @@ const Dashboard = () => {
     const fetchStartups = async () => {
       setLoading(true);
       try {
-        const response = await axios.get('https://forgebackend.vercel.app/api/v1/startup', {
+        const response = await axios.get('https://forge-backend-self.vercel.app/api/v1/startup', {
           withCredentials : true
       });
         console.log(response);
